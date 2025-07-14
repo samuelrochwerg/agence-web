@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 const PolitiqueConfidentialite = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -276,6 +277,7 @@ const PolitiqueConfidentialite = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

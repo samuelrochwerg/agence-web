@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Globe, Code, Search, TrendingUp, ArrowRight, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
+import Footer from './components/Footer';
+import laVagabondeImg from './assets/images/la-vagabonde.png';
+import leadstrooperImg from './assets/images/leadstrooper.png';
+import atlantiqueTravauxImg from './assets/images/atlantique-travaux-services.png';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -81,16 +85,6 @@ function App() {
                   </div>
                 </div>
                 <button
-                  onClick={() => scrollToSection('tarifs')}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    activeSection === 'tarifs'
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                  }`}
-                >
-                  Tarifs
-                </button>
-                <button
                   onClick={() => scrollToSection('realisations')}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     activeSection === 'realisations'
@@ -99,6 +93,16 @@ function App() {
                   }`}
                 >
                   Nos réalisations
+                </button>
+                <button
+                  onClick={() => scrollToSection('tarifs')}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    activeSection === 'tarifs'
+                      ? 'text-blue-600 bg-blue-50'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                  }`}
+                >
+                  Tarifs
                 </button>
                 <button
                   onClick={() => scrollToSection('contact')}
@@ -154,16 +158,6 @@ function App() {
                 </div>
               </div>
               <button
-                onClick={() => scrollToSection('tarifs')}
-                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                  activeSection === 'tarifs'
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                }`}
-              >
-                Tarifs
-              </button>
-              <button
                 onClick={() => scrollToSection('realisations')}
                 className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors ${
                   activeSection === 'realisations'
@@ -172,6 +166,16 @@ function App() {
                 }`}
               >
                 Nos réalisations
+              </button>
+              <button
+                onClick={() => scrollToSection('tarifs')}
+                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  activeSection === 'tarifs'
+                    ? 'text-blue-600 bg-blue-50'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                }`}
+              >
+                Tarifs
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
@@ -445,19 +449,19 @@ function App() {
               {
                 title: 'Site vitrine La Vagabonde',
                 description: 'Maison d\'hôtes dans le Sud de la France',
-                image: 'https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=800',
+                image: laVagabondeImg,
                 link: 'https://fascinating-queijadas-b3e277.netlify.app/'
               },
               {
                 title: 'Web app Leadstrooper',
                 description: 'Extraction de données de Google Maps',
-                image: 'https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800',
+                image: leadstrooperImg,
                 link: 'https://www.leadstrooper.com/'
               },
               {
                 title: 'Site internet artisan',
                 description: 'Ramonage, nettoyage, dépannage, entretien...',
-                image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800',
+                image: atlantiqueTravauxImg,
                 link: 'https://www.atlantiquetravauxservices.fr/'
               }
             ].map((project, index) => (
@@ -465,7 +469,7 @@ function App() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-64 object-contain bg-white"
                 />
                 <div className="p-6">
                   <h4 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h4>
@@ -870,23 +874,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-gray-400">
-              © 2024 L'agence web. Tous droits réservés.
-            </p>
-            <div className="mt-2 space-x-6">
-              <a href="/mentions-legales" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Mentions légales
-              </a>
-              <a href="/politique-confidentialite" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Politique de confidentialité
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Menu, X, TrendingUp, ArrowRight, CheckCircle, Mail, Phone, MapPin, Target } from 'lucide-react';
+import { Menu, X, TrendingUp, ArrowRight, CheckCircle, Mail, Phone, MapPin, Target, BarChart2, FileText, PieChart } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 const SEA = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -56,16 +57,16 @@ const SEA = () => {
                   </div>
                 </div>
                 <button
-                  onClick={() => scrollToSection('tarifs')}
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
-                >
-                  Tarifs
-                </button>
-                <button
                   onClick={() => scrollToSection('realisations')}
                   className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
                 >
                   Nos réalisations
+                </button>
+                <button
+                  onClick={() => scrollToSection('tarifs')}
+                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+                >
+                  Tarifs
                 </button>
                 <button
                   onClick={() => scrollToSection('contact')}
@@ -108,16 +109,16 @@ const SEA = () => {
                 </div>
               </div>
               <button
-                onClick={() => scrollToSection('tarifs')}
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
-              >
-                Tarifs
-              </button>
-              <button
                 onClick={() => scrollToSection('realisations')}
                 className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
               >
                 Nos réalisations
+              </button>
+              <button
+                onClick={() => scrollToSection('tarifs')}
+                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+              >
+                Tarifs
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
@@ -133,36 +134,44 @@ const SEA = () => {
       {/* Hero Section */}
       <section className="pt-16 pb-20 bg-gradient-to-br from-orange-50 via-white to-red-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-orange-100 rounded-full mb-8">
-              <TrendingUp className="h-10 w-10 text-orange-600" />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                SEA
+                <span className="block bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+                  Référencement payant
+                </span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Générez du trafic qualifié immédiatement avec Google Ads. 
+                Campagnes publicitaires optimisées pour maximiser votre retour sur investissement.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a
+                  href="/#contact"
+                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 transition-colors"
+                >
+                  Demander un devis
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+                <a
+                  href="https://calendly.com/samuelrochwerg1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+                >
+                  Prendre un rdv gratuit
+                </a>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              SEA
-              <span className="block bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-                Référencement payant
-              </span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Générez du trafic qualifié immédiatement avec Google Ads. 
-              Campagnes publicitaires optimisées pour maximiser votre retour sur investissement.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/#contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 transition-colors"
-              >
-                Demander un devis
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-              <a
-                href="https://calendly.com/samuelrochwerg1/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
-              >
-                Prendre un rdv gratuit
-              </a>
+            {/* Right Image */}
+            <div className="mt-10 lg:mt-0 flex justify-center">
+              <img
+                src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="SEA"
+                className="rounded-lg shadow-lg w-full max-w-md object-cover"
+              />
             </div>
           </div>
         </div>
@@ -184,32 +193,38 @@ const SEA = () => {
             {[
               {
                 title: 'Résultats immédiats',
-                description: 'Générez du trafic et des conversions dès le lancement de vos campagnes.'
+                description: 'Générez du trafic et des conversions dès le lancement de vos campagnes.',
+                emoji: '⚡'
               },
               {
                 title: 'Ciblage précis',
-                description: 'Atteignez exactement votre audience cible avec des critères de ciblage avancés.'
+                description: 'Atteignez exactement votre audience cible avec des critères de ciblage avancés.',
+                emoji: '🎯'
               },
               {
                 title: 'Budget maîtrisé',
-                description: 'Contrôlez parfaitement vos dépenses publicitaires avec des budgets flexibles.'
+                description: 'Contrôlez parfaitement vos dépenses publicitaires avec des budgets flexibles.',
+                emoji: '💸'
               },
               {
                 title: 'Mesure du ROI',
-                description: 'Suivez précisément le retour sur investissement de chaque euro dépensé.'
+                description: 'Suivez précisément le retour sur investissement de chaque euro dépensé.',
+                emoji: '📏'
               },
               {
                 title: 'Flexibilité totale',
-                description: 'Ajustez vos campagnes en temps réel selon les performances.'
+                description: 'Ajustez vos campagnes en temps réel selon les performances.',
+                emoji: '🔄'
               },
               {
                 title: 'Visibilité maximale',
-                description: 'Apparaissez en première position sur les recherches stratégiques.'
+                description: 'Apparaissez en première position sur les recherches stratégiques.',
+                emoji: '🚀'
               }
             ].map((benefit, index) => (
               <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-full mb-4 group-hover:bg-orange-200 transition-colors">
-                  <Target className="h-6 w-6 text-orange-600" />
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-full mb-4 group-hover:bg-orange-200 transition-colors text-2xl">
+                  {benefit.emoji}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
@@ -236,31 +251,38 @@ const SEA = () => {
               {
                 title: 'Configuration Google Ads',
                 description: 'Mise en place complète de votre compte et de vos premières campagnes.',
+                icon: <CheckCircle className="w-8 h-8 text-orange-600" />, // old icon
                 features: ['Création du compte', 'Structure des campagnes', 'Configuration du tracking', 'Paramétrage des conversions']
               },
               {
                 title: 'Gestion des campagnes',
                 description: 'Optimisation continue de vos campagnes pour améliorer les performances.',
+                icon: <BarChart2 className="w-8 h-8 text-orange-600" />, // old icon
                 features: ['Suivi quotidien', 'Optimisation des enchères', 'A/B testing', 'Ajustements stratégiques']
               },
               {
                 title: 'Création d\'annonces',
                 description: 'Rédaction d\'annonces percutantes qui convertissent vos prospects en clients.',
+                icon: <FileText className="w-8 h-8 text-orange-600" />, // old icon
                 features: ['Annonces textuelles', 'Extensions d\'annonces', 'Annonces responsives', 'Landing pages']
               },
               {
                 title: 'Rapports et analyses',
                 description: 'Suivi détaillé des performances avec rapports mensuels personnalisés.',
+                icon: <PieChart className="w-8 h-8 text-orange-600" />, // old icon
                 features: ['Tableaux de bord', 'Rapports mensuels', 'Analyse des conversions', 'Recommandations']
               }
             ].map((service, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-full mb-4 group-hover:bg-orange-200 transition-colors">
+                  {service.icon}
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-orange-600 mr-2" />
+                      <CheckCircle className="w-5 h-5 text-orange-600 mr-2" />
                       <span className="text-sm text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -447,21 +469,6 @@ const SEA = () => {
                 />
               </div>
               <div>
-                <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-1">
-                  Budget publicitaire mensuel
-                </label>
-                <select
-                  id="budget"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                >
-                  <option value="">Sélectionnez votre budget</option>
-                  <option value="500-1000">500€ - 1 000€</option>
-                  <option value="1000-2500">1 000€ - 2 500€</option>
-                  <option value="2500-5000">2 500€ - 5 000€</option>
-                  <option value="5000+">Plus de 5 000€</option>
-                </select>
-              </div>
-              <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                   Message
                 </label>
@@ -482,6 +489,7 @@ const SEA = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

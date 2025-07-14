@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 const MentionsLegales = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -38,8 +39,8 @@ const MentionsLegales = () => {
               <div className="ml-10 flex items-baseline space-x-8">
                 {[
                   { name: 'Accueil', id: 'accueil' },
-                  { name: 'Tarifs', id: 'tarifs' },
                   { name: 'Nos réalisations', id: 'realisations' },
+                  { name: 'Tarifs', id: 'tarifs' },
                   { name: 'Contact', id: 'contact' }
                 ].map((item) => (
                   <button
@@ -71,8 +72,8 @@ const MentionsLegales = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {[
                 { name: 'Accueil', id: 'accueil' },
-                { name: 'Tarifs', id: 'tarifs' },
                 { name: 'Nos réalisations', id: 'realisations' },
+                { name: 'Tarifs', id: 'tarifs' },
                 { name: 'Contact', id: 'contact' }
               ].map((item) => (
                 <button
@@ -192,6 +193,7 @@ const MentionsLegales = () => {
           </section>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

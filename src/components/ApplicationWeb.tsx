@@ -1,6 +1,8 @@
 import React from 'react';
 import { Menu, X, Code, ArrowRight, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import Footer from './Footer';
+import leadstrooperImg from '../assets/images/leadstrooper.png';
 
 const ApplicationWeb = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -56,16 +58,16 @@ const ApplicationWeb = () => {
                   </div>
                 </div>
                 <button
-                  onClick={() => scrollToSection('tarifs')}
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
-                >
-                  Tarifs
-                </button>
-                <button
                   onClick={() => scrollToSection('realisations')}
                   className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
                 >
                   Nos réalisations
+                </button>
+                <button
+                  onClick={() => scrollToSection('tarifs')}
+                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+                >
+                  Tarifs
                 </button>
                 <button
                   onClick={() => scrollToSection('contact')}
@@ -108,16 +110,16 @@ const ApplicationWeb = () => {
                 </div>
               </div>
               <button
-                onClick={() => scrollToSection('tarifs')}
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
-              >
-                Tarifs
-              </button>
-              <button
                 onClick={() => scrollToSection('realisations')}
                 className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
               >
                 Nos réalisations
+              </button>
+              <button
+                onClick={() => scrollToSection('tarifs')}
+                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+              >
+                Tarifs
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
@@ -133,36 +135,44 @@ const ApplicationWeb = () => {
       {/* Hero Section */}
       <section className="pt-16 pb-20 bg-gradient-to-br from-teal-50 via-white to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-teal-100 rounded-full mb-8">
-              <Code className="h-10 w-10 text-teal-600" />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Application web
+                <span className="block bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">
+                  sur mesure
+                </span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Développement d'applications web complexes et performantes. 
+                Solutions sur mesure avec fonctionnalités avancées et architecture évolutive.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a
+                  href="/#contact"
+                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 transition-colors"
+                >
+                  Demander un devis
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+                <a
+                  href="https://calendly.com/samuelrochwerg1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+                >
+                  Prendre un rdv gratuit
+                </a>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Application web
-              <span className="block bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">
-                sur mesure
-              </span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Développement d'applications web complexes et performantes. 
-              Solutions sur mesure avec fonctionnalités avancées et architecture évolutive.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/#contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 transition-colors"
-              >
-                Demander un devis
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-              <a
-                href="https://calendly.com/samuelrochwerg1/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
-              >
-                Prendre un rdv gratuit
-              </a>
+            {/* Right Image */}
+            <div className="mt-10 lg:mt-0 flex justify-center">
+              <img
+                src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Application web"
+                className="rounded-lg shadow-lg w-full max-w-md object-cover"
+              />
             </div>
           </div>
         </div>
@@ -184,32 +194,38 @@ const ApplicationWeb = () => {
             {[
               {
                 title: 'Fonctionnalités sur mesure',
-                description: 'Développement de fonctionnalités spécifiques adaptées à vos processus métier.'
+                description: 'Développement de fonctionnalités spécifiques adaptées à vos processus métier.',
+                emoji: '⚙️'
               },
               {
                 title: 'Interface interactive',
-                description: 'Expérience utilisateur riche avec des interactions dynamiques et intuitives.'
+                description: 'Expérience utilisateur riche avec des interactions dynamiques et intuitives.',
+                emoji: '🖱️'
               },
               {
                 title: 'Gestion de données',
-                description: 'Base de données robuste pour stocker et gérer vos informations critiques.'
+                description: 'Base de données robuste pour stocker et gérer vos informations critiques.',
+                emoji: '🗄️'
               },
               {
                 title: 'Intégrations API',
-                description: 'Connexion avec vos outils existants et services tiers via des APIs.'
+                description: 'Connexion avec vos outils existants et services tiers via des APIs.',
+                emoji: '🔗'
               },
               {
                 title: 'Évolutivité',
-                description: 'Architecture conçue pour grandir avec votre entreprise et vos besoins.'
+                description: 'Architecture conçue pour grandir avec votre entreprise et vos besoins.',
+                emoji: '📈'
               },
               {
                 title: 'Sécurité avancée',
-                description: 'Protection des données avec les meilleures pratiques de sécurité web.'
+                description: 'Protection des données avec les meilleures pratiques de sécurité web.',
+                emoji: '🔒'
               }
             ].map((feature, index) => (
               <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-full mb-4 group-hover:bg-teal-200 transition-colors">
-                  <CheckCircle className="h-6 w-6 text-teal-600" />
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-full mb-4 group-hover:bg-teal-200 transition-colors text-2xl">
+                  {feature.emoji}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -235,34 +251,78 @@ const ApplicationWeb = () => {
             {[
               {
                 title: 'CRM personnalisé',
-                description: 'Gestion de la relation client adaptée à vos processus commerciaux.'
+                description: 'Gestion de la relation client adaptée à vos processus commerciaux.',
+                image: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4bb.png' // laptop emoji
               },
               {
                 title: 'Plateforme e-learning',
-                description: 'Système de formation en ligne avec suivi des progrès et certifications.'
+                description: 'Système de formation en ligne avec suivi des progrès et certifications.',
+                image: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f393.png' // graduation cap emoji
               },
               {
                 title: 'Outil de gestion',
-                description: 'Application métier pour optimiser vos processus internes.'
+                description: 'Application métier pour optimiser vos processus internes.',
+                image: 'https://img.icons8.com/color/96/000000/task.png'
               },
               {
                 title: 'Marketplace',
-                description: 'Plateforme de mise en relation entre vendeurs et acheteurs.'
+                description: 'Plateforme de mise en relation entre vendeurs et acheteurs.',
+                image: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f6d2.png' // shopping cart emoji
               },
               {
                 title: 'Dashboard analytique',
-                description: 'Tableaux de bord interactifs pour visualiser vos données.'
+                description: 'Tableaux de bord interactifs pour visualiser vos données.',
+                image: 'https://img.icons8.com/color/96/000000/combo-chart--v2.png'
               },
               {
                 title: 'Système de réservation',
-                description: 'Gestion des réservations et plannings en temps réel.'
+                description: 'Gestion des réservations et plannings en temps réel.',
+                image: 'https://img.icons8.com/color/96/000000/calendar--v2.png'
               }
             ].map((example, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+                <img src={example.image} alt={example.title} className="w-12 h-12 rounded-full object-cover mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{example.title}</h3>
                 <p className="text-gray-600">{example.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Example Project Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+            Exemple de réalisation d'une application web sur mesure
+          </h2>
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="flex-1 flex flex-col items-center justify-center">
+              <img src={leadstrooperImg} alt="Application Leadstrooper" className="rounded-lg shadow-lg w-full max-w-lg h-80 object-contain bg-white" />
+              <div className="w-full flex justify-center mt-4">
+                <a
+                  href="https://www.leadstrooper.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-5 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors"
+                >
+                  Visiter le site
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="ml-2 w-4 h-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H19.5V12M19.5 6L10.5 15M4.5 18H19.5" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div className="flex-1">
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Besoin du client :</h3>
+                <p className="text-gray-700">Créer une application web pour extraire des données de Google Maps et générer des fichiers Excel/CSV pour la prospection B2B.</p>
+              </div>
+              <div className="bg-gray-50 border-l-4 border-blue-500 p-4 rounded">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Avis du client :</h3>
+                <p className="italic text-gray-800">"Application web sur mesure parfaitement réalisée. L'équipe technique est compétente et à l'écoute. Le projet a été livré dans les temps et fonctionne parfaitement."</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -408,6 +468,7 @@ const ApplicationWeb = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

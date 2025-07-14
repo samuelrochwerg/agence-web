@@ -1,6 +1,8 @@
 import React from 'react';
 import { Menu, X, Globe, ArrowRight, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import Footer from './Footer';
+import laVagabondeImg from '../assets/images/la-vagabonde.png';
 
 const SiteVitrine = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -56,16 +58,16 @@ const SiteVitrine = () => {
                   </div>
                 </div>
                 <button
-                  onClick={() => scrollToSection('tarifs')}
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
-                >
-                  Tarifs
-                </button>
-                <button
                   onClick={() => scrollToSection('realisations')}
                   className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
                 >
                   Nos réalisations
+                </button>
+                <button
+                  onClick={() => scrollToSection('tarifs')}
+                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+                >
+                  Tarifs
                 </button>
                 <button
                   onClick={() => scrollToSection('contact')}
@@ -108,16 +110,16 @@ const SiteVitrine = () => {
                 </div>
               </div>
               <button
-                onClick={() => scrollToSection('tarifs')}
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
-              >
-                Tarifs
-              </button>
-              <button
                 onClick={() => scrollToSection('realisations')}
                 className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
               >
                 Nos réalisations
+              </button>
+              <button
+                onClick={() => scrollToSection('tarifs')}
+                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+              >
+                Tarifs
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
@@ -133,36 +135,44 @@ const SiteVitrine = () => {
       {/* Hero Section */}
       <section className="pt-16 pb-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-8">
-              <Globe className="h-10 w-10 text-blue-600" />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Site vitrine
+                <span className="block bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
+                  professionnel
+                </span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Créez une présence en ligne élégante et professionnelle pour votre entreprise. 
+                Nos sites vitrines allient design moderne et performance optimale.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a
+                  href="/#contact"
+                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                >
+                  Demander un devis
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+                <a
+                  href="https://calendly.com/samuelrochwerg1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+                >
+                  Prendre un rdv gratuit
+                </a>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Site vitrine
-              <span className="block bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                professionnel
-              </span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Créez une présence en ligne élégante et professionnelle pour votre entreprise. 
-              Nos sites vitrines allient design moderne et performance optimale.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/#contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
-              >
-                Demander un devis
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-              <a
-                href="https://calendly.com/samuelrochwerg1/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
-              >
-                Prendre un rdv gratuit
-              </a>
+            {/* Right Image */}
+            <div className="mt-10 lg:mt-0 flex justify-center">
+              <img
+                src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Site internet vitrine"
+                className="rounded-lg shadow-lg w-full max-w-md object-cover"
+              />
             </div>
           </div>
         </div>
@@ -184,37 +194,80 @@ const SiteVitrine = () => {
             {[
               {
                 title: 'Présence professionnelle',
-                description: 'Établissez votre crédibilité avec un site web professionnel qui inspire confiance à vos clients.'
+                description: 'Établissez votre crédibilité avec un site web professionnel qui inspire confiance à vos clients.',
+                emoji: '🏢'
               },
               {
                 title: 'Visibilité 24/7',
-                description: 'Votre entreprise est accessible en permanence, permettant aux clients de vous découvrir à tout moment.'
+                description: 'Votre entreprise est accessible en permanence, permettant aux clients de vous découvrir à tout moment.',
+                emoji: '🌐'
               },
               {
                 title: 'Génération de leads',
-                description: 'Convertissez vos visiteurs en prospects grâce à des formulaires de contact optimisés.'
+                description: 'Convertissez vos visiteurs en prospects grâce à des formulaires de contact optimisés.',
+                emoji: '📈'
               },
               {
                 title: 'Référencement naturel',
-                description: 'Améliorez votre visibilité sur Google avec un site optimisé pour le SEO.'
+                description: 'Améliorez votre visibilité sur Google avec un site optimisé pour le SEO.',
+                emoji: '🔍'
               },
               {
                 title: 'Design responsive',
-                description: 'Votre site s\'adapte parfaitement à tous les écrans : mobile, tablette et desktop.'
+                description: 'Votre site s\'adapte parfaitement à tous les écrans : mobile, tablette et desktop.',
+                emoji: '📱'
               },
               {
                 title: 'Facilité de gestion',
-                description: 'Mettez à jour votre contenu facilement grâce à une interface d\'administration intuitive.'
+                description: 'Mettez à jour votre contenu facilement grâce à une interface d\'administration intuitive.',
+                emoji: '🛠️'
               }
             ].map((feature, index) => (
               <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4 group-hover:bg-blue-200 transition-colors">
-                  <CheckCircle className="h-6 w-6 text-blue-600" />
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4 group-hover:bg-blue-200 transition-colors text-2xl">
+                  {feature.emoji}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Example Project Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+            Exemple de réalisation d'un site vitrine pour une maison d'hôte
+          </h2>
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="flex-1 flex flex-col items-center justify-center">
+              <img src={laVagabondeImg} alt="Site La Vagabonde" className="rounded-lg shadow-lg w-full max-w-lg h-80 object-contain bg-white" />
+              <div className="w-full flex justify-center mt-4">
+                <a
+                  href="https://fascinating-queijadas-b3e277.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-5 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors"
+                >
+                  Visiter le site
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="ml-2 w-4 h-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H19.5V12M19.5 6L10.5 15M4.5 18H19.5" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div className="flex-1">
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Besoin du client :</h3>
+                <p className="text-gray-700">Créer un site internet pour ma maison d'hôtes afin d'avoir une vitrine en ligne et obtenir des réservations en direct, sans passer par Booking ou Airbnb.</p>
+              </div>
+              <div className="bg-gray-50 border-l-4 border-blue-500 p-4 rounded">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Avis du client :</h3>
+                <p className="italic text-gray-800">"Excellent travail sur notre site de maison d'hôtes ! L'équipe a su comprendre nos besoins et créer un site élégant qui nous ressemble. Nous recevons beaucoup plus de réservations depuis."</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -366,6 +419,7 @@ const SiteVitrine = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
