@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import laVagabondeImg from './assets/images/la-vagabonde.png';
 import leadstrooperImg from './assets/images/leadstrooper.png';
 import atlantiqueTravauxImg from './assets/images/atlantique-travaux-services.png';
+import heroBannerImg from './assets/images/hero-banner.png';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -197,7 +198,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-left pt-8">
               <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 Sites internet et marketing
                 <span className="block bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
@@ -226,139 +227,13 @@ function App() {
               </div>
             </div>
 
-            {/* Right Hero Image - Client Websites Showcase */}
-            <div className="relative">
-              {/* Three Websites Showcase - All Visible */}
-              <div className="space-y-6 max-w-md mx-auto">
-                
-                {/* La Vagabonde */}
-                <div className="transform hover:scale-105 transition-all duration-300">
-                  <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
-                    {/* Browser Chrome */}
-                    <div className="bg-gray-100 px-3 py-1.5 flex items-center space-x-2 border-b">
-                      <div className="flex space-x-1">
-                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                        <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 bg-white rounded px-2 py-0.5 text-xs text-gray-600">
-                        fascinating-queijadas-b3e277.netlify.app
-                      </div>
-                    </div>
-                    {/* Website Content */}
-                    <div className="bg-white">
-                      <div className="bg-white border-b border-red-200 px-3 py-2">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center space-x-2">
-                            <div className="w-3 h-3 bg-red-500 rounded flex items-center justify-center">
-                              <span className="text-white text-xs">🏠</span>
-                            </div>
-                            <span className="font-semibold text-red-600 text-sm">La Vagabonde</span>
-                          </div>
-                          <div className="flex space-x-2 text-xs">
-                            <span className="text-red-600 font-medium">Accueil</span>
-                            <span className="text-gray-600">La Maison</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="px-3 py-3 bg-gradient-to-r from-red-50 to-orange-50">
-                        <h3 className="text-sm font-bold text-gray-900 mb-1">La Vagabonde</h3>
-                        <p className="text-gray-600 text-xs mb-2">Maison d'hôtes - Bed and Breakfast à Arles</p>
-                        <div className="flex space-x-2">
-                          <div className="bg-red-600 text-white px-2 py-1 rounded text-xs font-medium">
-                            Découvrir
-                          </div>
-                          <div className="border border-red-600 text-red-600 px-2 py-1 rounded text-xs font-medium">
-                            Réserver
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Leadstrooper */}
-                <div className="transform hover:scale-105 transition-all duration-300">
-                  <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
-                    <div className="bg-gray-100 px-3 py-1.5 flex items-center space-x-2 border-b">
-                      <div className="flex space-x-1">
-                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                        <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 bg-white rounded px-2 py-0.5 text-xs text-gray-600">
-                        leadstrooper.com
-                      </div>
-                    </div>
-                    <div className="bg-white">
-                      <div className="bg-white border-b border-gray-100 px-3 py-2">
-                        <div className="flex items-center justify-between">
-                          <div className="text-blue-600 font-bold text-sm">leadstrooper</div>
-                          <div className="bg-blue-600 text-white px-2 py-1 rounded text-xs">Sign up</div>
-                        </div>
-                      </div>
-                      <div className="px-3 py-3">
-                        <h3 className="text-sm font-bold text-gray-900 mb-1">Google Maps Scraper</h3>
-                        <p className="text-gray-600 text-xs mb-2">
-                          Automate your Google Maps scraping. Collect verified leads.
-                        </p>
-                        <div className="flex space-x-2">
-                          <div className="bg-blue-600 text-white px-2 py-1 rounded text-xs font-medium">
-                            Try for free
-                          </div>
-                          <div className="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs font-medium">
-                            Contact
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Atlantique Travaux */}
-                <div className="transform hover:scale-105 transition-all duration-300">
-                  <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
-                    <div className="bg-gray-100 px-3 py-1.5 flex items-center space-x-2 border-b">
-                      <div className="flex space-x-1">
-                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                        <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      </div>
-                      <div className="flex-1 bg-white rounded px-2 py-0.5 text-xs text-gray-600">
-                        atlantiquetravauxservices.fr
-                      </div>
-                    </div>
-                    <div className="bg-blue-600">
-                      <div className="px-3 py-2 flex items-center justify-between">
-                        <div className="flex items-center space-x-2">
-                          <div className="w-3 h-3 bg-white rounded flex items-center justify-center">
-                            <span className="text-blue-600 text-xs font-bold">A</span>
-                          </div>
-                          <span className="text-white font-semibold text-sm">tlantique Travaux</span>
-                        </div>
-                      </div>
-                      <div className="px-3 py-3">
-                        <div className="bg-yellow-400 text-blue-900 px-2 py-1 rounded text-xs font-medium inline-block mb-2">
-                          Nettoyage, ramonage, dépannages
-                        </div>
-                        <div className="flex space-x-2 mt-2">
-                          <div className="bg-white text-blue-600 px-2 py-1 rounded text-xs font-medium">
-                            06 36 01 22 48
-                          </div>
-                          <div className="bg-yellow-400 text-blue-900 px-2 py-1 rounded text-xs font-medium">
-                            DEVIS GRATUIT
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* Background decorative elements */}
-              <div className="absolute -top-4 -right-4 w-48 h-48 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-              <div className="absolute -bottom-8 -left-4 w-48 h-48 bg-teal-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" style={{animationDelay: '2s'}}></div>
+            {/* Right Hero Image - Replace with hero-banner */}
+            <div className="mt-10 lg:mt-0 flex justify-center">
+              <img
+                src={heroBannerImg}
+                alt="Hero banner"
+                className="rounded-lg shadow-lg w-full max-w-md object-cover"
+              />
             </div>
           </div>
         </div>
