@@ -162,7 +162,7 @@ const ApplicationWeb = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
                 >
-                  Prendre un rdv gratuit
+                  Prendre rendez-vous
                 </a>
               </div>
             </div>
@@ -418,14 +418,14 @@ const ApplicationWeb = () => {
                     rel="noopener noreferrer"
                     className="text-teal-600 hover:text-teal-800 hover:underline transition-colors"
                   >
-                    Prendre un rendez-vous gratuit
+                    Prendre rendez-vous
                   </a>
                 </div>
               </div>
             </div>
 
             <form 
-              action="https://formsubmit.co/samuelrochwerg1@gmail.com"
+              action="https://formsubmit.co/26a35d63035bef831c58faa5615a012d"
               method="POST"
               className="space-y-6"
             >

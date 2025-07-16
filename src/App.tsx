@@ -222,7 +222,7 @@ function App() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
                 >
-                  Prendre un rdv gratuit
+                  Prendre rendez-vous
                 </a>
               </div>
             </div>
@@ -628,7 +628,7 @@ function App() {
               {
                 name: 'Pierre Schockert',
                 company: 'Atlantique Travaux',
-                review: 'Son site vitrine et sa fiche Google My Business lui ont permis d\'obtenir des clients dans son périmètre d\'action.',
+                review: 'Mon site vitrine et ma fiche Google My Business m\'ont permis d\'obtenir des clients en plus très rapidement.',
                 rating: 5
               },
               {
@@ -697,7 +697,7 @@ function App() {
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
                   >
-                    Prendre un rendez-vous gratuit
+                    Prendre rendez-vous
                   </a>
                 </div>
               </div>
