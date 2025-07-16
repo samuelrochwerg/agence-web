@@ -8,6 +8,7 @@ import SEO from './components/SEO';
 import SEA from './components/SEA';
 import MentionsLegales from './components/MentionsLegales';
 import PolitiqueConfidentialite from './components/PolitiqueConfidentialite';
+import Merci from './components/Merci';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/sea" element={<SEA />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
         <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+        <Route path="/merci" element={<Merci />} />
       </Routes>
     </Router>
   </StrictMode>

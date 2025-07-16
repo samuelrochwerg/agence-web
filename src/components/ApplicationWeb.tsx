@@ -424,7 +424,11 @@ const ApplicationWeb = () => {
               </div>
             </div>
 
-            <form className="space-y-6">
+            <form 
+              action="https://formsubmit.co/samuelrochwerg1@gmail.com"
+              method="POST"
+              className="space-y-6"
+            >
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                   Nom
@@ -432,8 +436,10 @@ const ApplicationWeb = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   placeholder="Votre nom"
+                  required
                 />
               </div>
               <div>
@@ -443,8 +449,10 @@ const ApplicationWeb = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   placeholder="votre@email.com"
+                  required
                 />
               </div>
               <div>
@@ -453,11 +461,16 @@ const ApplicationWeb = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   placeholder="Décrivez votre projet d'application web..."
+                  required
                 />
               </div>
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_subject" value="Nouveau message du formulaire de contact !" />
+              <input type="hidden" name="_next" value="/merci" />
               <button
                 type="submit"
                 className="w-full bg-teal-600 text-white py-3 px-4 rounded-md hover:bg-teal-700 transition-colors font-medium"
