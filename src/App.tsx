@@ -704,7 +704,7 @@ function App() {
             </div>
 
             <form 
-              action="https://formsubmit.co/samuelrochwerg1@gmail.com"
+              action="https://formsubmit.co/26a35d63035bef831c58faa5615a012d"
               method="POST"
               className="space-y-6"
             >
