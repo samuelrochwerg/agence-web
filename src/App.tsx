@@ -703,7 +703,11 @@ function App() {
               </div>
             </div>
 
-            <form className="space-y-6">
+            <form 
+              action="https://formsubmit.co/samuelrochwerg1@gmail.com"
+              method="POST"
+              className="space-y-6"
+            >
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                   Nom
@@ -711,8 +715,10 @@ function App() {
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Votre nom"
+                  required
                 />
               </div>
               <div>
@@ -722,8 +728,10 @@ function App() {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="votre@email.com"
+                  required
                 />
               </div>
               <div>
@@ -732,11 +740,16 @@ function App() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Décrivez votre projet..."
+                  required
                 />
               </div>
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_subject" value="Nouveau message du formulaire de contact !" />
+              <input type="hidden" name="_next" value="https://agence-web-beige.vercel.app/merci" />
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium"
