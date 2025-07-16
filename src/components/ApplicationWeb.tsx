@@ -470,7 +470,7 @@ const ApplicationWeb = () => {
               </div>
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_subject" value="Nouveau message du formulaire de contact !" />
-              <input type="hidden" name="_next" value="/merci" />
+              <input type="hidden" name="_next" value="https://agence-web-beige.vercel.app/merci" />
               <button
                 type="submit"
                 className="w-full bg-teal-600 text-white py-3 px-4 rounded-md hover:bg-teal-700 transition-colors font-medium"
