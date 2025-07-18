@@ -2,6 +2,7 @@ import React from 'react';
 import { Menu, X, TrendingUp, ArrowRight, CheckCircle, Mail, Phone, MapPin, Target, BarChart2, FileText, PieChart } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Footer from './Footer';
+import { motion } from 'framer-motion';
 
 const SEA = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -132,7 +133,13 @@ const SEA = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-orange-50 via-white to-red-50">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7 }}
+        className="pt-32 pb-20 bg-gradient-to-br from-orange-50 via-white to-red-50"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -175,10 +182,16 @@ const SEA = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-white">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+        className="py-20 bg-white"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -232,10 +245,16 @@ const SEA = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        className="py-20 bg-gray-50"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -291,10 +310,16 @@ const SEA = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Campaign Types Section */}
-      <section className="py-20 bg-white">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+        className="py-20 bg-white"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -339,10 +364,16 @@ const SEA = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gray-50">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.4 }}
+        className="py-20 bg-gray-50"
+      >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -397,10 +428,16 @@ const SEA = () => {
             </p>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.5 }}
+        className="py-20 bg-white"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -497,7 +534,7 @@ const SEA = () => {
             </form>
           </div>
         </div>
-      </section>
+      </motion.section>
       <Footer />
     </div>
   );

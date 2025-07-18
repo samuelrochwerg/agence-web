@@ -6,6 +6,7 @@ import laVagabondeImg from './assets/images/la-vagabonde.png';
 import leadstrooperImg from './assets/images/leadstrooper.png';
 import atlantiqueTravauxImg from './assets/images/atlantique-travaux-services.png';
 import heroBannerImg from './assets/images/hero-banner.png';
+import { motion } from 'framer-motion';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -194,7 +195,14 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section id="accueil" className="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
+      <motion.section
+        id="accueil"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7 }}
+        className="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-teal-50"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -237,10 +245,17 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-white">
+      <motion.section
+        id="services"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+        className="py-20 bg-white"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
@@ -305,10 +320,17 @@ function App() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Portfolio Section */}
-      <section id="realisations" className="py-20 bg-gray-50">
+      <motion.section
+        id="realisations"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        className="py-20 bg-gray-50"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
@@ -369,10 +391,17 @@ function App() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Tarifs Section */}
-      <section id="tarifs" className="py-20 bg-gray-50">
+      <motion.section
+        id="tarifs"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+        className="py-20 bg-gray-50"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
@@ -603,7 +632,7 @@ function App() {
             </button>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Client Reviews Section */}
       <section className="py-20 bg-white">

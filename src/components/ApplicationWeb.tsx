@@ -3,6 +3,7 @@ import { Menu, X, Code, ArrowRight, CheckCircle, Mail, Phone, MapPin } from 'luc
 import { Link, useNavigate } from 'react-router-dom';
 import Footer from './Footer';
 import leadstrooperImg from '../assets/images/leadstrooper.png';
+import { motion } from 'framer-motion';
 
 const ApplicationWeb = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -133,7 +134,13 @@ const ApplicationWeb = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-teal-50 via-white to-blue-50">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7 }}
+        className="pt-32 pb-20 bg-gradient-to-br from-teal-50 via-white to-blue-50"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -176,10 +183,16 @@ const ApplicationWeb = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+        className="py-20 bg-white"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -233,10 +246,16 @@ const ApplicationWeb = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Examples Section */}
-      <section className="py-20 bg-gray-50">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        className="py-20 bg-gray-50"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -288,7 +307,7 @@ const ApplicationWeb = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Example Project Section */}
       <section className="py-16 bg-white">

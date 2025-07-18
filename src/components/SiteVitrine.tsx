@@ -3,6 +3,7 @@ import { Menu, X, Globe, ArrowRight, CheckCircle, Mail, Phone, MapPin } from 'lu
 import { Link, useNavigate } from 'react-router-dom';
 import Footer from './Footer';
 import laVagabondeImg from '../assets/images/la-vagabonde.png';
+import { motion } from 'framer-motion';
 
 const SiteVitrine = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -133,7 +134,13 @@ const SiteVitrine = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7 }}
+        className="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-teal-50"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -176,10 +183,16 @@ const SiteVitrine = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+        className="py-20 bg-white"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -233,10 +246,16 @@ const SiteVitrine = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Example Project Section */}
-      <section className="py-16 bg-white">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        className="py-16 bg-white"
+      >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
             Exemple de réalisation d'un site vitrine pour une maison d'hôte
@@ -270,10 +289,16 @@ const SiteVitrine = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gray-50">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+        className="py-20 bg-gray-50"
+      >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -327,10 +352,16 @@ const SiteVitrine = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.4 }}
+        className="py-20 bg-white"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -431,7 +462,7 @@ const SiteVitrine = () => {
             </form>
           </div>
         </div>
-      </section>
+      </motion.section>
       <Footer />
     </div>
   );
