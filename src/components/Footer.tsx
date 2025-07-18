@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center">
         <p className="text-gray-400">
-          © 2024 L'agence web. Tous droits réservés.
+          © 2024 Agence web. Tous droits réservés.
         </p>
         <div className="mt-2 space-x-6">
           <a href="/mentions-legales" className="text-gray-400 hover:text-white transition-colors text-sm">

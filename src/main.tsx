@@ -1,6 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import App from './App';
 import SiteVitrine from './components/SiteVitrine';
 import ApplicationWeb from './components/ApplicationWeb';
@@ -11,9 +12,18 @@ import PolitiqueConfidentialite from './components/PolitiqueConfidentialite';
 import Merci from './components/Merci';
 import './index.css';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/site-vitrine" element={<SiteVitrine />} />

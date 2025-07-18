@@ -22,14 +22,14 @@ const ApplicationWeb = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white/95 backdrop-blur-md border-b border-gray-100">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <Link to="/">
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                    L'agence web
+                    Agence web
                   </h1>
                 </Link>
               </div>
@@ -133,7 +133,7 @@ const ApplicationWeb = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-16 pb-20 bg-gradient-to-br from-teal-50 via-white to-blue-50">
+      <section className="pt-32 pb-20 bg-gradient-to-br from-teal-50 via-white to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}

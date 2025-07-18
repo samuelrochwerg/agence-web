@@ -15,7 +15,7 @@ const Merci = () => {
               <div className="flex-shrink-0">
                 <Link to="/">
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                    L'agence web
+                    Agence web
                   </h1>
                 </Link>
               </div>

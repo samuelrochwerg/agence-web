@@ -28,7 +28,7 @@ const MentionsLegales = () => {
               <div className="flex-shrink-0">
                 <Link to="/">
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                    L'agence web
+                    Agence web
                   </h1>
                 </Link>
               </div>
@@ -105,7 +105,7 @@ const MentionsLegales = () => {
             <div className="bg-gray-50 p-6 rounded-lg mb-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Éditeur du site :</h3>
               <p className="text-gray-700">
-                <strong>L'agence web</strong><br />
+                <strong>Agence web</strong><br />
                 Micro-entreprise<br />
                 Adresse : Paris, France<br />
                 Email : samuelrochwerg1@gmail.com<br />

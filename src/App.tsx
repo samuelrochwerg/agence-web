@@ -51,7 +51,7 @@ function App() {
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                  L'agence web
+                  Agence web
                 </h1>
               </div>
             </div>
@@ -194,7 +194,7 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section id="accueil" className="pt-16 pb-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
+      <section id="accueil" className="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}

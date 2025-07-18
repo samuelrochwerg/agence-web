@@ -28,7 +28,7 @@ const PolitiqueConfidentialite = () => {
               <div className="flex-shrink-0">
                 <Link to="/">
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                    L'agence web
+                    Agence web
                   </h1>
                 </Link>
               </div>
@@ -112,7 +112,7 @@ const PolitiqueConfidentialite = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Responsable du traitement</h2>
             <div className="bg-gray-50 p-6 rounded-lg mb-6">
               <p className="text-gray-700">
-                <strong>L'agence web</strong><br />
+                <strong>Agence web</strong><br />
                 Email : samuelrochwerg1@gmail.com<br />
                 Téléphone : 06 43 86 13 60<br />
                 Adresse : Paris, France
